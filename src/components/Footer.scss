@@ -1,13 +1,17 @@
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 0;
+  width: 100%; /* Ensure the footer takes the full width of its container */
+  background: linear-gradient(#006663, #111111);
+  padding: 2rem;
+  color: #ffffff;
   text-align: center;
+  box-sizing: border-box; /* Include padding in width calculations */
  
 
+  
   p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 #footer {
@@ -52,4 +56,5 @@
       }
     }
   }
+
 }

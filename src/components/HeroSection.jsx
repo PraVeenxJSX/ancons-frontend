@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import "../styles/HeroSection.scss"
 
-
 const HeroSection = () => {
   const navigate = useNavigate();
 
@@ -29,26 +28,12 @@ const HeroSection = () => {
         <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem' }}>
           January, May, Aug 2025 semesters
         </p>
-        <button
-          onClick={handleRegister}
-          style={{
-            marginTop: '20px',
-            padding: '10px 20px',
-            backgroundColor: '#007bff',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            fontFamily: 'Poppins, sans-serif',
-          }}
-        >
+        <button onClick={handleRegister}>
           Register
         </button>
-        
       </div>
     </motion.section>
   );
- 
 };
 
 export default HeroSection;
