@@ -10,7 +10,7 @@ import michigan from '../../public/michigan.webp';
 import newhaven from '../../public/newhaven.webp';
 import Nova from '../../public/nova.webp';
 import texas from '../../public/texas.webp';
-import William from '../../public/William.webp';
+import William from '../../public/william.webp';
 import wichita from '../../public/wichita.webp';
 
 
