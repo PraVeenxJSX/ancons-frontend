@@ -9,11 +9,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out; // Fallback smooth transition
   
-  &:hover {
-    /* Optional: These effects will be overridden by Framer Motion */
-    height: 700px;
-    transform: scale(0.75); // Slight zoom
-  }
+ 
 }
 
 // Media queries for responsiveness
