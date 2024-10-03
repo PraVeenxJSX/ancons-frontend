@@ -1,0 +1,39 @@
+.banner-image-container {
+  margin-top: 30px; // Space between the button and the image
+  text-align: center; // Center the image horizontally
+}
+
+.banner-image {
+  width: 1300px;
+  height: 650px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out; // Fallback smooth transition
+  
+  &:hover {
+    /* Optional: These effects will be overridden by Framer Motion */
+    height: 700px;
+    transform: scale(0.75); // Slight zoom
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 1200px) {
+  .banner-image {
+    width: 90%; // Reduce width to 90% of the container
+    height: auto; // Maintain aspect ratio
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    width: 100%; // Full width on smaller screens
+    height: auto; // Maintain aspect ratio
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    width: 100%; // Full width on mobile devices
+    height: auto; // Maintain aspect ratio
+  }
+}

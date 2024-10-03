@@ -1,0 +1,25 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cta-button {
+  background-color: #ffdd57;
+  color: #333;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+  }
+}

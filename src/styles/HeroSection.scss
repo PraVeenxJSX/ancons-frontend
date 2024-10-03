@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.hero {
+  height: 70vh; /* Full viewport height */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Arrange elements in a column */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background-color: rgba(167, 176, 204, 0.079); /* Adjust transparency */
+  border-radius: 15px;
+  text-align: center; /* Align text to the center */
+  overflow: hidden; /* Prevent any hidden overflow */
+  position: relative; /* Set the position relative for z-index usage */
+  animation: fadeIn 1s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../public/ancons bg.jpeg') center center / contain no-repeat;
+    filter: blur(0px); /* No blur for a clear logo */
+    opacity: 0.5; /* Make it slightly transparent */
+    z-index: -1; /* Place it behind the content */
+  }
+}
+
+.container {
+  text-align: center; /* Center align the content */
+
+  h1 {
+    font-size: 4rem;
+    color: #3e644a;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 3px; /* Add space between letters */
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 2.4rem;
+    color: #ffff;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 15%;
+    height: 7%;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+#hero {
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Reset margin */
+  padding: 0px; /* Adjust padding */
+  background-color: #f8f8f8; /* Example background color */
+}

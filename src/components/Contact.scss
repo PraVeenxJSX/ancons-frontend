@@ -1,0 +1,87 @@
+.contact {
+  
+  padding: 60px 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  
+  // Remove left/right padding to prevent extra space
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+          border-color: #007BFF;
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        height: 150px;
+      }
+    }
+
+    .cta-button {
+      width: auto; /* Adjusted width */
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+#contact {
+  width: 100%; /* Ensure the section takes full width */
+  margin: 0; /* Reset margin */
+  padding: 20px; /* Adjust padding */
+  background-color: #fff; /* Example background color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding for consistent spacing */
+}
