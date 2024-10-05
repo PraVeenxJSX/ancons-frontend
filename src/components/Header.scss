@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(#006663, #111111);
+  // background: linear-gradient(#006663, #111111);
   width: 100vw;
   padding: 15px 0;
   position: sticky;
@@ -9,6 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #1b1a2ea9 !important;
+  transition: all 0.3s ease-out 0s !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
+  background-color: #1b1a2ea9 !important;
+  transition: all 0.3s ease-out 0s !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
 
   .container {
     display: flex;
@@ -80,6 +88,9 @@
       flex-direction: column;
       gap: 4px;
       cursor: pointer;
+      padding: 1rem 2rem !important;
+      font-size: 1.4rem !important;
+      
 
       div {
         width: 25px;
@@ -97,8 +108,8 @@
     top: 0;
     right: -300px;
     width: 250px;
-    height: 100%;
-    background-color: #111111;
+    height: 100vh;  // Ensure it covers full height
+    background-color: #000000;  // Set background color to black
     transition: right 0.3s ease;
     z-index: 999;
     padding: 20px;
@@ -106,21 +117,53 @@
 
     .nav-links {
       display: block;
-      gap: 15px;
+      gap: 20px;  // Add space between sidebar links
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
       li {
+        margin-bottom: 15px;  // Add spacing between links
         a,
         .link-button {
           display: block;
           padding: 10px 0;
+          background-color: rgba(0, 0, 0, 0.633);  // Set the button color to black
+          color: #f8f8f8;
+          text-decoration: none;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #0056b3;
+          }
         }
       }
     }
 
     &.open {
-      right: 0;  /* Slide in sidebar when open */
+      right: 0;  // Slide in sidebar when open
     }
   }
+
+  // Overlay effect for the rest of the page when sidebar is open
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);  // Semi-transparent black
+    z-index: 998;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;  // Disable interactions when sidebar is closed
+
+    &.open {
+      opacity: 1;
+      pointer-events: auto;  // Enable interactions when sidebar is open
+    }
+  }
+
 
   // Apply button styles
   .apply-button {
