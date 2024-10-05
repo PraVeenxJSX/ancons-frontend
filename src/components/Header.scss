@@ -114,7 +114,7 @@
   .sidebar {
     position: fixed;
     top: 0;
-    right: -300px; /* Keep the sidebar hidden off-screen */
+    right: -300px;
     width: 250px;
     height: 100vh;
     background-color: #111;
@@ -122,9 +122,11 @@
     z-index: 999;
     padding: 20px;
     overflow-y: auto;
+    pointer-events: none;
 
     &.open {
       right: 0;
+      pointer-events: auto;
     }
 
     .nav-links {
@@ -188,6 +190,12 @@
     &.open {
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      right: -300px; /* Sidebar hidden by default on small screens */
     }
   }
 }

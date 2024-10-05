@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       <div className={`overlay ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}></div>
-      
+
       <header className="header" id="header">
         <div className="container">
           <div className="burger-icon" onClick={toggleSidebar}>
