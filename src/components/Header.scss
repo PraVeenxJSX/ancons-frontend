@@ -114,7 +114,7 @@
   .sidebar {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -300px; /* Keep the sidebar hidden off-screen */
     width: 250px;
     height: 100vh;
     background-color: #111;

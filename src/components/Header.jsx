@@ -36,9 +36,9 @@ const Header = () => {
       <header className="header" id="header">
         <div className="container">
           <div className="burger-icon" onClick={toggleSidebar}>
-            <div className={isOpen ? 'cross-icon' : ''}></div>
-            <div className={isOpen ? 'cross-icon' : ''}></div>
-            <div className={isOpen ? 'cross-icon' : ''}></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
 
           <div className="logo">
