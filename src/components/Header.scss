@@ -1,3 +1,15 @@
+/* Disabling zoom on mobile devices */
+html, body {
+  touch-action: manipulation;
+  overflow-x: hidden;
+  user-select: none;
+  -ms-touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  zoom: reset;
+}
+
 .header {
   width: 100vw;
   padding: 15px 0;
