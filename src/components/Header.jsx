@@ -4,9 +4,9 @@ import './Header.scss';
 import '../App.css';
 
 const Header = () => {
-  const location = useLocation(); 
-  const navigate = useNavigate(); 
-  const [isOpen, setIsOpen] = useState(false); 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen); // Toggling the state for opening/closing the sidebar
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -56,7 +56,6 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Updated to include 'open' class when sidebar is toggled */}
           <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <ul className="nav-links">
               <li><button onClick={() => handleClick('hero')} className="link-button">Home</button></li>
