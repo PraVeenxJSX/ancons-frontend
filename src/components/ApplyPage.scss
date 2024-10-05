@@ -1,245 +1,92 @@
 .apply-page {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 50px;
-    background-color: #f8f9fa;
-  
-    .info-section {
-      flex: 1;
-      max-width: 45%;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-      h1 {
-        font-size: 2.5rem;
-        color: #1e3c72;
-        margin-bottom: 15px;
-        font-family: 'Playfair Display', serif;
-      }
-  
-      p {
-        font-size: 1.2rem;
-        color: #333;
-        line-height: 1.6;
-      }
-  
-      ul {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding-left: 20px;
-        list-style-type: disc;
-  
-        li {
-          font-size: 1.1rem;
-          color: #555;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  
-    .form-section {
-      flex: 1;
-      max-width: 45%;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-      h2 {
-        font-size: 2rem;
-        color: #2a5298;
-        margin-bottom: 20px;
-        font-family: 'Playfair Display', serif;
-      }
-  
-      .application-form {
-        display: flex;
-        flex-direction: column;
-  
-        label {
-          font-size: 1.1rem;
-          color: #333;
-          margin-bottom: 10px;
-  
-          input,
-          select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-          }
-        }
-  
-        button {
-          background-color: #007bff;
-          color: white;
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          font-size: 1.1rem;
-          cursor: pointer;
-          transition: background-color 0.3s;
-  
-          &:hover {
-            background-color: #0056b3;
-          }
-        }
-      }
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f7fb;
+
+  .info-section, .ets-section, .form-section {
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
-  .apply-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  
-    .info-section,
-    .ets-section,
-    .form-section {
-      max-width: 800px;
-      width: 100%;
-      margin-bottom: 30px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      background-color: #f9f9f9;
-  
-      h1, h2, h3, h4 {
-        color: #333;
-      }
-  
-      p {
-        line-height: 1.5;
-        margin: 10px 0;
-      }
-  
-      ul {
-        list-style-type: disc;
-        margin-left: 20px;
-  
-        li {
-          margin: 5px 0;
-        }
-      }
-    }
-  
-    .opening-hours {
-      cursor: pointer; // Makes the opening hours clickable
-      color: #007BFF;
-      text-decoration: underline;
-  
-      &.toggle-hours {
-        margin: 10px 0;
-      }
-  
-      .hours-list {
-        margin: 10px 0;
-        padding: 0;
-        list-style-type: none;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        color: #555;
-  
-        li {
-          margin: 5px 0;
-        }
-      }
-    }
-  
-    .application-form {
-      display: flex;
-      flex-direction: column;
-  
-      label {
-        margin-bottom: 15px;
-        font-weight: bold;
-  
-        input, select {
-          width: 100%;
-          padding: 10px;
-          margin-top: 5px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-        }
-      }
-  
-      button {
-        background-color: #28a745;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-  
-        &:hover {
-          background-color: #218838;
-        }
-      }
-    }
+
+  h1, h2, h3, h4 {
+    color: #2c3e50;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
   }
-  .apply-page {
-    .info-section, .ets-section, .form-section {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-    }
-  
-    .ets-logo, .gre-toefl-logo {
-      max-width: 150px;  // Adjust as necessary for size
+
+  p {
+    color: #34495e;
+    line-height: 1.8;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+    
+    li {
       margin-bottom: 10px;
+      font-size: 1.1rem;
     }
-  
+  }
+
+  .ets-logo, .gre-toefl-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+
+  .form-section {
     .application-form {
       label {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         font-weight: bold;
+        color: #2c3e50;
+
+        input, select {
+          width: 100%;
+          padding: 12px;
+          margin-top: 8px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: #007bff;
+            outline: none;
+          }
+        }
       }
-  
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      select,
-      input[type="file"] {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-  
+
       button {
         background-color: #007bff;
         color: white;
-        padding: 10px 15px;
+        padding: 12px 20px;
         border: none;
-        border-radius: 4px;
+        border-radius: 6px;
+        font-size: 1.1rem;
         cursor: pointer;
-  
+        transition: background-color 0.3s ease;
+
         &:hover {
           background-color: #0056b3;
         }
       }
     }
-  
-    .opening-hours {
-      h4 {
-        cursor: pointer;
-        color: #007bff;
-        text-decoration: underline;
-      }
-  
-      .hours-list {
-        margin-top: 10px;
-      }
+  }
+
+  .info-section, .ets-section {
+    h2 {
+      margin-top: 0;
     }
   }
-  
+}
