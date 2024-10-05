@@ -1,22 +1,12 @@
 .header {
-  // background: linear-gradient(#006663, #111111);
   width: 100vw;
   padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1b1a2ea9 !important;
-  transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
-  background-color: #1b1a2ea9 !important;
-  transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
+  background-color: #000000a9;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease-out;
 
   .container {
     display: flex;
@@ -27,48 +17,67 @@
   }
 
   .logo {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+    text-align: center;
 
     a {
-      display: block;
       text-decoration: none;
 
-      .logo-image {
-        height: 50px;
-        width: auto;
+      .logo-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #f8f8f8;
+        margin-top: 15px;
+        background: linear-gradient(90deg, #007bff, #00ff88);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        position: relative;
+        transition: all 0.3s ease;
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+
+        &:hover {
+          letter-spacing: 2px;
+          text-shadow: 2px 4px 15px rgba(0, 123, 255, 0.7);
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 3px;
+          background: #007bff;
+          transition: width 0.5s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
 
-  // Navigation links for larger screens
   .desktop-nav {
-    display: none;  // Hidden on mobile
+    display: none;
 
     @media (min-width: 769px) {
       display: block;
 
       .nav-links {
         list-style: none;
-        display: flex;  /* Ensure flex for larger screens */
+        display: flex;
         gap: 50px;
-        padding: 0;
-        margin: 0;
 
         li {
-          a,
           .link-button {
-            text-decoration: none;
-            color: #f8f8f8;
             font-family: 'Playfair Display', serif;
             font-size: large;
             font-weight: 700;
-            transition: color 0.3s;
             background-color: transparent;
             border: none;
-            padding: 0;
-            cursor: pointer;
+            color: #f8f8f8;
+            transition: color 0.3s;
 
             &:hover {
               color: #0056b3;
@@ -79,7 +88,6 @@
     }
   }
 
-  // Burger icon for mobile devices
   .burger-icon {
     display: none;
 
@@ -88,9 +96,6 @@
       flex-direction: column;
       gap: 4px;
       cursor: pointer;
-      padding: 1rem 2rem !important;
-      font-size: 1.4rem !important;
-      
 
       div {
         width: 25px;
@@ -98,39 +103,43 @@
         background-color: #f8f8f8;
         border-radius: 5px;
         transition: all 0.3s ease;
+
+        &.cross-icon {
+          background-color: red;
+          transform: rotate(45deg);
+        }
       }
     }
   }
 
-  // Sidebar for mobile devices
   .sidebar {
     position: fixed;
     top: 0;
     right: -300px;
     width: 250px;
-    height: 100vh;  // Ensure it covers full height
-    background-color: #000000;  // Set background color to black
+    height: 100vh;
+    background-color: #000;
     transition: right 0.3s ease;
     z-index: 999;
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+
+    &.open {
+      right: 0; /* Sidebar slides in from the right when the 'open' class is applied */
+    }
 
     .nav-links {
-      display: block;
-      gap: 20px;  // Add space between sidebar links
-      margin: 0;
-      padding: 0;
       list-style: none;
+      display: block;
+      gap: 20px;
 
       li {
-        margin-bottom: 15px;  // Add spacing between links
-        a,
+        margin-bottom: 15px;
+
         .link-button {
           display: block;
           padding: 10px 0;
-          background-color: rgba(0, 0, 0, 0.633);  // Set the button color to black
           color: #f8f8f8;
-          text-decoration: none;
+          background-color: rgba(0, 0, 0, 0.633);
           transition: background-color 0.3s;
 
           &:hover {
@@ -139,46 +148,41 @@
         }
       }
     }
+  }
 
-    &.open {
-      right: 0;  // Slide in sidebar when open
+  .apply-button {
+    .btn-apply {
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.4);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+        box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.6);
+      }
     }
   }
 
-  // Overlay effect for the rest of the page when sidebar is open
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);  // Semi-transparent black
-    z-index: 998;
-    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
-    pointer-events: none;  // Disable interactions when sidebar is closed
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 
     &.open {
       opacity: 1;
-      pointer-events: auto;  // Enable interactions when sidebar is open
-    }
-  }
-
-
-  // Apply button styles
-  .apply-button {
-    .btn-apply {
-      text-decoration: none;
-      background-color: #000000;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-family: 'Playfair Display', serif;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #0056b3;
-      }
+      pointer-events: auto;
     }
   }
 }

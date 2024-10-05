@@ -26,23 +26,27 @@ const Header = () => {
   };
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Toggling the state for opening/closing the sidebar
   };
 
   return (
     <>
-      {/* Overlay for dark background effect when sidebar is open */}
       <div className={`overlay ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}></div>
       
       <header className="header" id="header">
         <div className="container">
+          <div className="burger-icon" onClick={toggleSidebar}>
+            <div className={isOpen ? 'cross-icon' : ''}></div>
+            <div className={isOpen ? 'cross-icon' : ''}></div>
+            <div className={isOpen ? 'cross-icon' : ''}></div>
+          </div>
+
           <div className="logo">
             <Link to="/">
-              <img src="./public/logoo.webp" alt="Ancons Logo" onClick={() => handleClick('hero')} className="logo-image" />
+              <p onClick={() => handleClick('hero')} className="logo-text">ANCONS INTERNATIONAL</p>
             </Link>
           </div>
 
-          {/* Desktop nav links */}
           <nav className="desktop-nav">
             <ul className="nav-links">
               <li><button onClick={() => handleClick('hero')} className="link-button">Home</button></li>
@@ -52,14 +56,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Mobile burger menu */}
-          <nav>
-            <div className="burger-icon" onClick={toggleSidebar}>
-              <div></div><div></div><div></div>
-            </div>
-          </nav>
-
-          {/* Sidebar for mobile */}
+          {/* Updated to include 'open' class when sidebar is toggled */}
           <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <ul className="nav-links">
               <li><button onClick={() => handleClick('hero')} className="link-button">Home</button></li>
@@ -69,7 +66,6 @@ const Header = () => {
             </ul>
           </div>
 
-          {/* Apply Button */}
           <div className="apply-button">
             <Link to="/apply" className="btn-apply">Apply</Link>
           </div>
