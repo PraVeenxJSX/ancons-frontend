@@ -35,7 +35,7 @@ const Header = () => {
 
       <header className="header" id="header">
         <div className="container">
-          <div className="burger-icon" onClick={toggleSidebar}>
+          <div className={`burger-icon ${isOpen ? 'cross-icon' : ''}`} onClick={toggleSidebar}>
             <div></div>
             <div></div>
             <div></div>
