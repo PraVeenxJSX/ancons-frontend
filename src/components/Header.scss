@@ -1,23 +1,22 @@
-/* Disabling zoom on mobile devices */
-html, body {
-  touch-action: manipulation;
-  overflow-x: hidden;
-  user-select: none;
-  -ms-touch-action: manipulation;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  zoom: reset;
+/* General adjustments */
+// html, body {
+//   touch-action: manipulation;
+//   overflow-x: hidden;
+//   user-select: none;
+// }
+
+body.no-scroll {
+  overflow: hidden !important;
 }
 
 .header {
   width: 100vw;
-  padding: 15px 0;
+  padding: 10px 0; /* Decreased the height */
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #000000a9;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease-out;
 
   .container {
@@ -35,8 +34,8 @@ html, body {
       text-decoration: none;
 
       .logo-text {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.2rem;
+        font-family: 'Lobster', cursive; /* Changed to a stylish font */
+        font-size: 1.5rem; /* Slightly increased font size */
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #f8f8f8;
@@ -44,7 +43,6 @@ html, body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800;
-        position: relative;
         transition: all 0.3s ease;
         text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
 
@@ -78,7 +76,7 @@ html, body {
       .nav-links {
         list-style: none;
         display: flex;
-        gap: 50px;
+        gap: 40px; /* Adjusted for balance */
 
         li {
           .link-button {
@@ -135,7 +133,7 @@ html, body {
   .sidebar {
     position: fixed;
     top: 0;
-    right: -300px; /* Sidebar hidden by default */
+    right: -300px;
     width: 250px;
     height: 100vh;
     background-color: #111;
@@ -143,11 +141,36 @@ html, body {
     z-index: 999;
     padding: 20px;
     overflow-y: auto;
-    pointer-events: none; /* Disable interactions by default */
+    pointer-events: none;
 
     &.open {
       right: 0;
-      pointer-events: auto; /* Enable interactions when open */
+      pointer-events: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 50px;
+
+      li {
+        .link-button {
+          display: block;
+          padding: 10px 15px;
+          color: #f8f8f8;
+          background-color: #007bff;
+          border-radius: 8px;
+          font-size: 1.2rem;
+          text-align: left;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
     }
   }
 
@@ -184,12 +207,6 @@ html, body {
         background-color: #0056b3;
         box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.6);
       }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .sidebar {
-      right: -300px; /* Sidebar hidden by default on small screens */
     }
   }
 }

@@ -27,6 +27,11 @@ const Header = () => {
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.classList.add('no-scroll'); // Disable scrolling
+    } else {
+      document.body.classList.remove('no-scroll'); // Enable scrolling
+    }
   };
 
   return (
