@@ -38,7 +38,7 @@ const Header = () => {
         <div className="container">
           <div className="logo">
             <Link to="/">
-              <img src="./public/anconsbg.jpeg" alt="Ancons Logo" onClick={() => handleClick('hero')} className="logo-image" />
+              <img src="./public/anconsbg.webp" alt="Ancons Logo" onClick={() => handleClick('hero')} className="logo-image" />
             </Link>
           </div>
 
