@@ -1,17 +1,10 @@
-/* General adjustments */
-// html, body {
-//   touch-action: manipulation;
-//   overflow-x: hidden;
-//   user-select: none;
-// }
-
 body.no-scroll {
   overflow: hidden !important;
 }
 
 .header {
   width: 100vw;
-  padding: 10px 0; /* Decreased the height */
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -34,8 +27,8 @@ body.no-scroll {
       text-decoration: none;
 
       .logo-text {
-        font-family: 'Lobster', cursive; /* Changed to a stylish font */
-        font-size: 1.5rem; /* Slightly increased font size */
+        font-family: 'Lobster', cursive;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #f8f8f8;
@@ -76,7 +69,7 @@ body.no-scroll {
       .nav-links {
         list-style: none;
         display: flex;
-        gap: 40px; /* Adjusted for balance */
+        gap: 40px;
 
         li {
           .link-button {
@@ -131,21 +124,19 @@ body.no-scroll {
   }
 
   .sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 250px;
-    height: 100vh;
-    background-color: #111;
-    transition: right 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1111115c;
+    transition: max-height 0.3s ease;
     z-index: 999;
     padding: 20px;
-    overflow-y: auto;
-    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
 
     &.open {
-      right: 0;
-      pointer-events: auto;
+      max-height: 300px; // Set an appropriate max height for the sidebar when open
     }
 
     .nav-links {
@@ -153,7 +144,7 @@ body.no-scroll {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-top: 50px;
+      margin-top: 20px;
 
       li {
         .link-button {
