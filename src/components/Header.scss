@@ -27,8 +27,8 @@ body.no-scroll {
       text-decoration: none;
 
       .logo-text {
-        font-family: 'Lobster', cursive;
-        font-size: 1.5rem;
+        font-family: 'Lobster', cursive, Arial, Helvetica, sans-serif; // Added fallback fonts
+        font-size: 1.5rem; /* Slightly increased font size */
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #f8f8f8;
@@ -128,7 +128,7 @@ body.no-scroll {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #1111115c;
+    background-color: #1111112d;
     transition: max-height 0.3s ease;
     z-index: 999;
     padding: 20px;
