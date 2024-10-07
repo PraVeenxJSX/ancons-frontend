@@ -27,8 +27,8 @@ body.no-scroll {
       text-decoration: none;
 
       .logo-text {
-        font-family: 'Lobster', cursive, Arial, Helvetica, sans-serif; // Added fallback fonts
-        font-size: 1.5rem; /* Slightly increased font size */
+        font-family: 'Lobster', cursive, Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #f8f8f8;
@@ -136,7 +136,7 @@ body.no-scroll {
     overflow: hidden;
 
     &.open {
-      max-height: 300px; // Set an appropriate max height for the sidebar when open
+      max-height: 300px;
     }
 
     .nav-links {

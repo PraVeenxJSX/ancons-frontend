@@ -17,6 +17,7 @@ const Header = () => {
 
   const handleClick = (id) => {
     setIsOpen(false);
+    document.body.classList.remove('no-scroll'); // Enable scrolling when clicking a link
     if (location.pathname === '/') {
       handleScroll(id);
     } else {
